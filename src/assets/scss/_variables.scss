@@ -1,0 +1,118 @@
+// Variables
+//
+// Variables should follow the `$component-state-property-size` formula for
+// consistent naming. Ex: $nav-link-disabled-color and $modal-content-box-shadow-xs.
+
+// Color system
+
+$white:    #fff;
+$smoke:  #e6e6e6;
+$grey: #918e9b;
+$charcoal: #262626;
+$grey-100: #f5f5f5;
+$grey-200: #e6e6e6;
+$grey-300: #c8c8c8;
+$grey-400: #999;
+$grey-500: #888;
+$grey-600: #777;
+$grey-700: #666;
+$grey-800: #555;
+$grey-900: #444;
+$black:    #000;
+
+$blue:    #012b4e;
+$darkblue:#06203b;
+$indigo:  #6610f2;
+$purple:  #6f42c1;
+$pink:    #e83e8c;
+$red:     #dc3545;
+$orange:  #fd7e14;
+$yellow:  #ffc107;
+$green:   #00FF57;
+$teal:    #00fecd;
+$cyan:    #17a2b8;
+
+$primary:       $blue;
+$secondary:     $teal;
+$success:       $teal;
+$info:          $cyan;
+$warning:       $yellow;
+$danger:        $red;
+$light:         $grey-200;
+$dark:          $grey-800;
+
+.grey { color: $grey; }
+
+
+
+// Grid breakpoints
+//
+// Define the minimum dimensions at which your layout will change,
+// adapting to different screen sizes, for use in media queries.
+
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 1040px,
+	xl: 1440px,
+	xxl: 1700px
+);
+
+
+
+// Grid containers
+//
+// Define the maximum width of `.container` for different screen sizes.
+
+$container-max-widths: (
+	sm: 540px,
+	md: 720px,
+	lg: 920px,
+	xl: 1160px,
+	xxl: 1500px
+);
+
+
+
+// Grid columns
+//
+// Set the number of columns and specify the width of the gutters.
+
+$grid-columns:                12;
+$grid-gutter-width:           30px;
+
+
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacer: 1rem;
+$spacers: ();
+// stylelint-disable-next-line scss/dollar-variable-default
+$spacers: map-merge(
+  (
+    0: 0,
+    1: $spacer,
+    2: ($spacer * 2),
+    3: ($spacer * 3),
+    4: ($spacer * 4),
+    5: ($spacer * 5)
+  ),
+  $spacers
+);
+
+
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+$font-family-primary:        'nimbus-sans', sans-serif;
+$font-family-heading:        'nimbus-sans', sans-serif;
+

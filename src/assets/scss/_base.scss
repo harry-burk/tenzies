@@ -1,0 +1,18 @@
+/* ==========================================================================
+   GLOBAL
+   ========================================================================== */
+
+  	$base: 16; // Set this to the font size of the body text
+  	$px: $base * 1px;
+  	$rem: $base * 1rem;
+
+  	@function rem($size) {
+  		$remSize: $size / $base;
+  		@return #{$remSize}rem;
+  	}
+
+  	$i: !important;
+
+  	img {
+  		max-width: 100%;
+  	}

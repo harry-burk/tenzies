@@ -1,13 +1,97 @@
+:root {
+	--white: #F5F5F5;
+	--primary: #0B2434;
+	--secondary: #59E391;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	background-color: var(--primary);
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+.App {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100vh;
+}
+
+main {	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding:  40px;
+	border-radius: 10px;
+	background: var(--white);
+}
+
+.dice-wrap {
+	display: grid;
+	grid-template-columns: auto auto auto auto auto;
+	gap: 40px;
+}
+
+.die {
+	cursor: pointer;
+	position: relative;
+	padding: 30px;
+	border-radius: 12px;
+	background-color: white;
+	box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.15);	
+}
+
+.die.held{
+	background-color: var(--secondary);
+}
+
+.die span {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 24px;
+	transform: translate(-50%, -50%);
+}
+
+.title {
+    font-size: 40px;
+    margin: 0;
+}
+
+.instructions {
+	width: 65%;
+    font-family: 'Inter', sans-serif;
+    font-weight: 400;
+    margin-top: 0;
+    text-align: center;    
+}
+
+.score {
+	width: 200px;
+}
+
+.roll-dice {
+	cursor: pointer;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 6px;
+    background-color: #5035FF;
+    color: white;
+    font-size: 1.2rem;
+    font-family: 'Karla', sans-serif;
+}
+
+.roll-dice:focus {
+    outline: none;
+}
+
+.roll-dice:active {
+    box-shadow: inset 5px 5px 10px -3px rgba(0, 0, 0, 0.7);
 }
